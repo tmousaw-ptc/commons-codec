@@ -45,6 +45,13 @@ public class Base64Test {
 
     private static final Charset CHARSET_UTF8 = Charsets.UTF_8;
 
+    private static final String[] BASE64_IMPOSSIBLE_CASES = {
+        "ZE==",
+        "ZmC=",
+        "Zm9vYE==",
+        "Zm9vYmC=",
+    };
+
     private final Random random = new Random();
 
     /**
@@ -1298,4 +1305,16 @@ public class Base64Test {
         assertEquals("testDEFAULT_BUFFER_SIZE", strOriginal, strDecoded);
     }
 
+    @Test
+    public void testBase64ImpossibleSamples() {
+        Base64 codec = new Base64();
+        for (String s : BASE64_IMPOSSIBLE_CASES) {
+            try {
+                codec.decode(s);
+                fail();
+            } catch (IllegalArgumentException ex) {
+                // expected
+            }
+        }
+    }
 }
