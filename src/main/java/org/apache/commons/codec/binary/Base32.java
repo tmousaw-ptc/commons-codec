@@ -558,10 +558,10 @@ public class Base32 extends BaseNCodec {
      * 
      * @throws IllegalArgumentException if the bits being checked contain any non-zero value
      */
-	private void validateCharacter(int numBits, Context context) {
-		if ((context.lbitWorkArea & numBits) != 0) {
-			throw new IllegalArgumentException(
-					"Last encoded character (before the paddings if any) is a valid base 32 alphabet but not a possible value");
-		}
-	}
+    private void validateCharacter(int numBits, Context context) {
+        if ((context.lbitWorkArea & numBits) != 0) {
+            throw new IllegalArgumentException(
+                "Last encoded character (before the paddings if any) is a valid base 32 alphabet but not a possible value");
+        }
+    }
 }

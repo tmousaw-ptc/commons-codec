@@ -794,11 +794,11 @@ public class Base64 extends BaseNCodec {
      * 
      * @throws IllegalArgumentException if the bits being checked contain any non-zero value
      */
-	private long validateCharacter(int numBitsToDrop, Context context) {
-		if ((context.ibitWorkArea & numBitsToDrop) != 0) {
-			throw new IllegalArgumentException(
-					"Last encoded character (before the paddings if any) is a valid base 64 alphabet but not a possible value");
-		}
-		return context.ibitWorkArea >> numBitsToDrop;
-	}
+    private long validateCharacter(int numBitsToDrop, Context context) {
+        if ((context.ibitWorkArea & numBitsToDrop) != 0) {
+        throw new IllegalArgumentException(
+            "Last encoded character (before the paddings if any) is a valid base 64 alphabet but not a possible value");
+        }
+        return context.ibitWorkArea >> numBitsToDrop;
+    }
 }
