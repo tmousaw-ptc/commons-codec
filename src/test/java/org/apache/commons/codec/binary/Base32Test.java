@@ -46,31 +46,31 @@ public class Base32Test {
         {"foobar" ,"MZXW6YTBOI======"},
     };
 
-	private static final String[] BASE32_IMPOSSIBLE_CASES = {
-		"MC======",
-		"MZXE====",
-		"MZXWB===",
-		"MZXW6YB=",
-		"MZXW6YTBOC======"
-	};
+    private static final String[] BASE32_IMPOSSIBLE_CASES = {
+        "MC======",
+        "MZXE====",
+        "MZXWB===",
+        "MZXW6YB=",
+        "MZXW6YTBOC======"
+        };
 
-	private static final String[] BASE32_IMPOSSIBLE_CASES_CHUNKED = {
-		"M2======\r\n",
-		"MZX0====\r\n",
-		"MZXW0===\r\n",
-		"MZXW6Y2=\r\n",
-		"MZXW6YTBO2======\r\n"
-	};
+    private static final String[] BASE32_IMPOSSIBLE_CASES_CHUNKED = {
+        "M2======\r\n",
+        "MZX0====\r\n",
+        "MZXW0===\r\n",
+        "MZXW6Y2=\r\n",
+        "MZXW6YTBO2======\r\n"
+    };
 
-	private static final String[] BASE32HEX_IMPOSSIBLE_CASES = {
-		"C2======",
-		"CPN4====",
-		"CPNM1===",
-		"CPNMUO1=",
-		"CPNMUOJ1E2======"
-	};
+    private static final String[] BASE32HEX_IMPOSSIBLE_CASES = {
+        "C2======",
+        "CPN4====",
+        "CPNM1===",
+        "CPNMUO1=",
+        "CPNMUOJ1E2======"
+    };
 
-        private static final Object[][] BASE32_BINARY_TEST_CASES;
+    private static final Object[][] BASE32_BINARY_TEST_CASES;
 
     //            { null, "O0o0O0o0" }
 //            BASE32_BINARY_TEST_CASES[2][0] = new Hex().decode("739ce739ce");
