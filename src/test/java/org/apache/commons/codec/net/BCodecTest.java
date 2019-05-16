@@ -31,7 +31,6 @@ import org.junit.Test;
 /**
  * Quoted-printable codec test cases
  *
- * @version $Id$
  */
 public class BCodecTest {
     private static final String[] BASE64_IMPOSSIBLE_CASES = {
